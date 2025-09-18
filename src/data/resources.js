@@ -27,14 +27,14 @@ export const protocols = [
     title: "Standard Operating Protocol for PCR",
     description:
       "The latest version of our lab's SOP for polymerase chain reaction.",
-    url: "/documents/sop_pcr.pdf",
+    url: "/lab_dg/documents/sop_pcr.pdf",
   },
   {
     id: "doc2",
     title: "Lab Safety Guidelines",
     description:
       "Essential safety information for all lab members and visitors.",
-    url: "/documents/lab_safety.pdf",
+    url: "/lab_dg/documents/lab_safety.pdf",
   },
 ];
 

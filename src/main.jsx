@@ -16,36 +16,41 @@ import PublishedMediaPage from "./pages/PublishedMediaPage.jsx";
 import ResourcesPage from "./pages/ResourcesPage.jsx";
 import ContactPage from "./pages/ContactPage.jsx";
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <HomePage />,
+    },
+    {
+      path: "/research",
+      element: <ResearchPage />,
+    },
+    {
+      path: "/team",
+      element: <TeamPage />,
+    },
+    {
+      path: "/publications", // Ensure this is also plural
+      element: <PublicationsPage />,
+    },
+    {
+      path: "/media",
+      element: <PublishedMediaPage />,
+    },
+    {
+      path: "/resources",
+      element: <ResourcesPage />,
+    },
+    {
+      path: "/contact",
+      element: <ContactPage />,
+    },
+  ],
   {
-    path: "/",
-    element: <HomePage />,
-  },
-  {
-    path: "/research",
-    element: <ResearchPage />,
-  },
-  {
-    path: "/team",
-    element: <TeamPage />,
-  },
-  {
-    path: "/publications", // Ensure this is also plural
-    element: <PublicationsPage />,
-  },
-  {
-    path: "/media",
-    element: <PublishedMediaPage />,
-  },
-  {
-    path: "/resources",
-    element: <ResourcesPage />,
-  },
-  {
-    path: "/contact",
-    element: <ContactPage />,
-  },
-]);
+    basename: "/lab_dg/", // Correctly configured for GitHub Pages
+  }
+);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

@@ -17,7 +17,7 @@ function HomePage() {
 
   const pi = {
     name: "Dr. Dweipayan Goswami",
-    photo: "/profile-photos/head.jpg", // Make sure this path is correct
+    photo: "public/profile-photos/head.jpg", // Make sure this path is correct
     bioSnippet:
       "Dr. Goswami leads the lab with a focus on computational biology and bioinformatics, aiming to unravel complex biological systems through data-driven approaches.",
   };
