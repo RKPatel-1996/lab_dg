@@ -1,0 +1,84 @@
+/* src/components/PublicationCard.css */
+.publication-card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.publication-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-family: var(--font-heading);
+  color: #555;
+}
+
+.publication-type {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.publication-year {
+  font-weight: bold;
+}
+
+.publication-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.publication-title:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+/* In src/components/PublicationCard.css */
+
+.publication-authors {
+  margin: 0.75rem 0;
+  color: #676f7a; /* Lighter text color for authors */
+  line-height: 1.6;
+  font-size: 0.85rem; /* Smaller font size */
+  max-height: 50px; /* Limit height and allow truncation */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.publication-journal {
+  margin: 0.5rem 0;
+  color: #1869a3; /* Blueish color for journal */
+  font-size: 0.95rem;
+}
+
+/* colros of publication type tags on publication page */
+.type-journal {
+  background-color: #0077b6;
+}
+.type-book-chapter {
+  background-color: #f77f00;
+}
+.type-book {
+  background-color: #d62828;
+}
+.type-conference {
+  background-color: #8338ec;
+}
+.type-default {
+  background-color: #6c757d;
+}

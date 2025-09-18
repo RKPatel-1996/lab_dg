@@ -1,0 +1,23 @@
+/* src/components/Navbar.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.nav-logo {
+  font-family: var(--font-heading); /* Uses the font from index.css */
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem; /* Puts space between the links */
+  margin: 0;
+  padding: 0;
+}

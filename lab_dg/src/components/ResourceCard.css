@@ -1,0 +1,38 @@
+.resource-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.resource-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background-color: #fff;
+  height: 100%;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.resource-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.resource-card h3 {
+  font-family: var(--font-heading);
+  margin-top: 0;
+  color: var(--text-color);
+}
+
+.resource-card p {
+  color: #555;
+  flex-grow: 1; /* Pushes the link text to the bottom */
+  line-height: 1.6;
+}
+
+.resource-link-text {
+  font-weight: bold;
+  color: var(--primary-color);
+  align-self: flex-end;
+}

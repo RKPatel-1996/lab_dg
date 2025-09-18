@@ -1,0 +1,149 @@
+That's a great question. To get started quickly in a new chat, providing a summary of our project's foundation is the most helpful thing you can do. It allows me to immediately understand the context without having to ask for information we've already established.
+Here is a simple "starter pack" you can use for any new chat. Just copy and paste this template and fill in the code sections.public/profile-photos/## Your "New Chat" Starter Pack 🚀
+You can begin a new chat with the following message:Hello! We're continuing to build the DG'S Lab website. Here is the project summary:
+1. The Goal & Stack:
+We are building a lab website using React, Vite, and standard CSS files for styling. We've already completed the Home, Research, Team, and Publications pages. The next page to build is the [e.g., Published Media] page.
+2. The Project Structure:
+Our project has the following file structure:
+(base) rkpatel@Rohit:/mnt/c/Users/rohit/Documents/websites/DGS_LAB/dgs-lab-website$ tree -I "node_modules"
+.
+├── README.md
+├── eslint.config.js
+├── index.html
+├── package-lock.json
+├── package.json
+├── public
+│   ├── lab-photos
+│   ├── profile-photos
+│   │   ├── alumni1.jpg
+│   │   ├── colab1.jpg
+│   │   ├── head.jpg
+│   │   ├── member1.jpg
+│   │   ├── member2.jpg
+│   │   ├── member3.jpeg
+│   │   ├── placeholder.jpg
+│   │   └── placeholder.png
+│   └── vite.svg
+├── src
+│   ├── App.css
+│   ├── App.jsx
+│   ├── assets
+│   │   ├── profile-photos
+│   │   └── react.svg
+│   ├── components
+│   │   ├── Footer.jsx
+│   │   ├── Navbar.css
+│   │   ├── Navbar.jsx
+│   │   ├── PublicationCard.css
+│   │   ├── PublicationCard.jsx
+│   │   ├── TeamMemberCard.css
+│   │   └── TeamMemberCard.jsx
+│   ├── data
+│   │   └── members.js
+│   ├── hooks
+│   │   └── usePublications.js
+│   ├── index.css
+│   ├── main.jsx
+│   └── pages
+│       ├── HomePage.jsx
+│       ├── PublicationsPage.css
+│       ├── PublicationsPage.jsx
+│       ├── ResearchPage.css
+│       ├── ResearchPage.jsx
+│       ├── TeamPage.css
+│       └── TeamPage.jsx
+└── vite.config.js10 directories, 36 files3. The Core Code:
+Here is the current state of our most important files.
+src/main.jsx (Our Routing Setup):
+JavaScript
+// src/main.jsx
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import "./index.css";
+// The import now correctly points to the file we created
+import HomePage from "./pages/HomePage.jsx";
+// (We will create and import the other pages soon)
+import ResearchPage from "./pages/ResearchPage.jsx";
+import TeamPage from "./pages/TeamPage.jsx";
+import PublicationsPage from "./pages/PublicationsPage.jsx";
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <HomePage />,
+  },
+  {
+    path: "/research",
+    element: <ResearchPage />,
+  },
+  {
+    path: "/team",
+    element: <TeamPage />,
+  },
+  {
+    path: "/publications", // Ensure this is also plural
+    element: <PublicationsPage />,
+  },
+]);
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>
+);
+src/components/Navbar.jsx (Our Navigation):
+JavaScript
+// src/components/Navbar.jsx
+import React from "react";
+import { Link } from "react-router-dom"; // Import Link for navigation
+import "./Navbar.css"; // We will create this file next for stylingfunction Navbar() {
+  return (
+    <nav className="navbar">
+      <Link to="/" className="nav-logo">
+        DG'S LAB
+      </Link>
+      <ul className="nav-links">
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/research">Our Research</Link>
+        </li>
+        <li>
+          <Link to="/team">Team</Link>
+        </li>
+        <li>
+          <Link to="/publications">Publications</Link>
+        </li>
+      </ul>
+    </nav>
+  );
+}
+export default Navbar;src/index.css (Our Global Styles):
+CSS
+/* src/index.css */
+@import url("https://fonts.googleapis.com/css2?family=Aptos&family=Lexend:wght@400;700&display=swap");
+:root {
+  --primary-color: #0cc4b2;
+  --secondary-color: #ed5170;
+  --text-color: #333;
+  --bg-color: #ffffff;
+  --font-heading: "Lexend", sans-serif;
+  --font-body: "Aptos", sans-serif;
+}
+body {
+  font-family: var(--font-body);
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  color: var(--primary-color);
+  text-decoration: none; /* Removes default underline */
+  font-weight: bold;
+}
+a:hover {
+  color: var(--secondary-color);
+}
+.

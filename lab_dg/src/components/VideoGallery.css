@@ -1,0 +1,22 @@
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.video-item {
+  text-align: center;
+}
+
+.video-item video {
+  width: 100%;
+  border-radius: 8px;
+  background-color: #000; /* For letterboxing */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.video-caption {
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  color: #333;
+}

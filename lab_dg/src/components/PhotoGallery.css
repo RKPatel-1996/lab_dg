@@ -1,0 +1,27 @@
+.photo-grid {
+  display: grid;
+  /* This creates a responsive grid of items that are around 150px wide */
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.photo-item {
+  /* This forces every grid item to be a perfect square */
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.photo-item img {
+  width: 100%;
+  height: 100%;
+  /* This is the key: it fills the square box, cropping the excess */
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.photo-item:hover img {
+  transform: scale(1.1);
+}

@@ -1,0 +1,71 @@
+/* src/pages/TeamPage.css */
+.team-content {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.filter-buttons {
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.filter-buttons button {
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  border: 1px solid var(--primary-color);
+  background-color: #fff;
+  color: var(--primary-color);
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.filter-buttons button:hover {
+  background-color: #f0fdfa; /* A light shade of the primary color */
+}
+
+.filter-buttons button.active {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.team-grid {
+  display: grid; /* This tells the browser to arrange items in a grid */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Creates responsive columns */
+  gap: 2rem; /* The space between the cards */
+}
+
+.selected-member-container {
+  display: flex;
+  align-items: flex-start; /* Aligns items to the top */
+  gap: 2rem; /* Space between the card and the panel */
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+/* Give the card a defined width in the selected view */
+.selected-member-container .team-card {
+  flex-shrink: 0; /* Prevents the card from shrinking */
+  width: 300px; /* Or whatever width looks best */
+}
+
+/* Remove the old expanded-panel styles from this file if they exist */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

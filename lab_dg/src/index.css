@@ -1,0 +1,30 @@
+/* src/index.css */
+@import url("https://fonts.googleapis.com/css2?family=Aptos&family=Lexend:wght@400;700&display=swap");
+
+:root {
+  --primary-color: #0cc4b2;
+  --secondary-color: #ed5170;
+  --text-color: #333;
+  --bg-color: #ffffff;
+  --font-heading: "Lexend", sans-serif;
+  --font-body: "Aptos", sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none; /* Removes default underline */
+  font-weight: bold;
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
