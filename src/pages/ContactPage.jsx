@@ -1,18 +1,24 @@
 import React from "react";
+// The Link component is no longer needed on this page, but we'll leave it in case you add other links later.
+import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ScrollButtons from "../components/ScrollButtons";
-
 import {
   FaMapMarkerAlt,
   FaEnvelope,
   FaPhone,
   FaLinkedin,
   FaTwitter,
-} from "react-icons/fa"; // Import icons
+  FaYoutube,
+  FaInstagram,
+  FaFacebook,
+} from "react-icons/fa";
 import "./ContactPage.css";
 
 function ContactPage() {
+  // The 'pi' object has been removed as it's no longer needed.
+
   return (
     <div>
       <Navbar />
@@ -30,15 +36,19 @@ function ContactPage() {
             <div className="contact-item">
               <FaMapMarkerAlt className="contact-icon" />
               <div>
-                <strong>Physical Address</strong>
+                <strong>Address</strong>
                 <p>
-                  Dr. Dweipayan Goswami, Assistant Professor,
+                  Dr. Dweipayan Goswami,
+                  <br />
+                  Assistant Professor,
                   <br />
                   Department of Microbiology and Biotechnology,
                   <br />
-                  School of Sciences, Gujarat University,
+                  University School of Sciences,
                   <br />
-                  Ahmedabad, Gujarat 380009, India
+                  Gujarat University, Ahmedabad,
+                  <br />
+                  Gujarat 380009, India
                 </p>
               </div>
             </div>
@@ -53,26 +63,9 @@ function ContactPage() {
                 </p>
               </div>
             </div>
-            <div className="contact-item">
-              <FaPhone className="contact-icon" />
-              <div>
-                <strong>Lab Phone</strong>
-                <p>
-                  <a href="tel:+919825222759">+91 9825222759</a>
-                </p>
-              </div>
-            </div>
 
-            <h2 className="online-header">Find Us Online</h2>
-            <div className="social-links-contact">
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <FaLinkedin /> LinkedIn
-              </a>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <FaTwitter /> X (Twitter)
-              </a>
-              {/* Add other links like ResearchGate here */}
-            </div>
+            <h2 className="online-header">Affiliation</h2>
+            <div className="social-links-contact"></div>
           </div>
 
           {/* Right Side: Embedded Map */}
@@ -88,6 +81,140 @@ function ContactPage() {
             ></iframe>
           </div>
         </div>
+
+        {/* === CORRECTED SECTION WITH DEPARTMENT AND UNIVERSITY CARDS === */}
+        <section className="combined-section">
+          <div className="container">
+            <div className="combined-grid">
+              {/* --- Card 1: Department of Microbiology and Biotechnology --- */}
+              <div className="column department-column">
+                <div className="column-content">
+                  <a
+                    href="https://www.gujaratuniversity.ac.in/details/23"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="column-photo-link"
+                  >
+                    <img
+                      src="profile-photos/mibit_logo.png"
+                      alt="Department of Microbiology and Biotechnology Logo"
+                      className="column-photo logo"
+                    />
+                  </a>
+                  <h4>Dept. of Microbiology and Biotechnology</h4>
+                  <p>
+                    Our Department is a dynamic and flexible organization with
+                    local focus. It was established in the year 1976 in
+                    University School of Sciences at Gujarat University
+                  </p>
+                  <div className="social-media-section">
+                    <h5>Connect with the Department</h5>
+                    <div className="social-links-grid">
+                      {/* Placeholder links for the department */}
+                      <a
+                        href="https://in.linkedin.com/school/gujarat-university"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Department LinkedIn"
+                      >
+                        <FaLinkedin />
+                      </a>
+                      <a
+                        href="https://facebook.com/gujaratuniversityofficialpage"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Department Facebook"
+                      >
+                        <FaFacebook />
+                      </a>
+                      <a
+                        href="https://instagram.com/gujarat_university"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Department Instagram"
+                      >
+                        <FaInstagram />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* --- Vertical Divider --- */}
+              <div className="vertical-divider"></div>
+
+              {/* --- Card 2: Gujarat University --- */}
+              <div className="column university-column">
+                <div className="column-content">
+                  <a
+                    href="https://www.gujaratuniversity.ac.in"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="column-photo-link"
+                  >
+                    <img
+                      src="profile-photos/gu_logo.png"
+                      alt="Gujarat University Logo"
+                      className="column-photo logo"
+                    />
+                  </a>
+                  <h3>Our University</h3>
+                  <h4>Gujarat University</h4>
+                  <p>
+                    Established in 1949 under the Gujarat University Act, the
+                    Gujarat University is largest and oldest university of the
+                    Gujarat state.
+                  </p>
+                  <div className="social-media-section">
+                    <h5>Connect with the University</h5>
+                    <div className="social-links-grid">
+                      <a
+                        href="https://in.linkedin.com/school/gujarat-university"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="LinkedIn"
+                      >
+                        <FaLinkedin />
+                      </a>
+                      <a
+                        href="https://facebook.com/gujaratuniversityofficialpage"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Facebook"
+                      >
+                        <FaFacebook />
+                      </a>
+                      <a
+                        href="https://instagram.com/gujarat_university"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Instagram"
+                      >
+                        <FaInstagram />
+                      </a>
+                      <a
+                        href="https://youtube.com/@GujaratUniversityIndia"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="YouTube"
+                      >
+                        <FaYoutube />
+                      </a>
+                      <a
+                        href="https://x.com/gujuni1949"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="X (Twitter)"
+                      >
+                        <FaTwitter />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
       <ScrollButtons />

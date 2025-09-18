@@ -1,28 +1,84 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer"; // Assuming you have a Footer component
+import Footer from "../components/Footer";
 import { FaArrowRight } from "react-icons/fa";
 import ScrollButtons from "../components/ScrollButtons";
 import "./HomePage.css";
 
+// --- Data for the new logo carousel ---
+// Instructions:
+// 1. You've already provided the logos for the first 3 items.
+// 2. For the others, create a folder named "logos" inside your "public" directory.
+// 3. Find colored SVG or PNG logos for ORCID, GitHub, etc., and save them in "public/logos/".
+//    For example: public/logos/github.svg, public/logos/youtube.svg
+const socialLinks = [
+  {
+    name: "Gujarat University",
+    logo: "profile-photos/gu_logo.png",
+    url: "https://www.gujaratuniversity.ac.in",
+  },
+  {
+    name: "MIBIT",
+    logo: "profile-photos/mibit_logo.png",
+    url: "https://www.gujaratuniversity.ac.in/details/23",
+  },
+  {
+    name: "Personal Website",
+    logo: "profile-photos/DG_logo.png",
+    url: "https://dweipayang.github.io/Resume-Webpage",
+  },
+  {
+    name: "ORCID",
+    logo: "logos/orcid.svg", // Add this logo to public/logos/
+    url: "https://orcid.org/0000-0003-0165-0294",
+  },
+  {
+    name: "GitHub",
+    logo: "logos/github.svg", // Add this logo to public/logos/
+    url: "https://github.com/DweipayanG",
+  },
+  {
+    name: "ResearchGate",
+    logo: "logos/researchgate.svg", // Add this logo to public/logos/
+    url: "https://www.researchgate.net/profile/Dweipayan-Goswami",
+  },
+  {
+    name: "Google Scholar",
+    logo: "logos/google_scholar.svg", // Add this logo to public/logos/
+    url: "https://scholar.google.com/citations?user=dLpNTzsAAAAJ&hl",
+  },
+  {
+    name: "YouTube",
+    logo: "logos/youtube.svg", // Add this logo to public/logos/
+    url: "https://www.youtube.com/c/learnatease",
+  },
+  {
+    name: "twitter",
+    logo: "logos/twitter.png", // Add this logo to public/logos/
+    url: "https://x.com/DweipayanG",
+  },
+  {
+    name: "instagram",
+    logo: "logos/insta.svg", // Add this logo to public/logos/
+    url: "https://www.instagram.com/dweipayan_goswami",
+  },
+  {
+    name: "LinkedIn",
+    logo: "logos/linkedIn.png", // Add this logo to public/logos/
+    url: "https://www.youtube.com/c/learnatease",
+  },
+];
+// -----------------------------------------
+
 function HomePage() {
-  // --- You can update this content easily ---
   const recentPublication = {
     title:
       "MurG as a potential target of quercetin in Staphylococcus aureus...",
     authors: "Dweipayan Goswami, Jignesh Prajapati, Milan Dabhi...",
     journal: "Scientific Reports, 2025",
-    url: "/publications", // Link to your publications page
+    url: "/publications",
   };
-
-  const pi = {
-    name: "Dr. Dweipayan Goswami",
-    photo: "profile-photos/head.jpg", // Make sure this path is correct
-    bioSnippet:
-      "Dr. Goswami leads the lab with a focus on computational biology and bioinformatics, aiming to unravel complex biological systems through data-driven approaches.",
-  };
-  // -----------------------------------------
 
   return (
     <div className="homepage">
@@ -63,15 +119,13 @@ function HomePage() {
               <h3>Latest News</h3>
               <ul>
                 <li>
-                  <span>Sep 2025:</span> Lab receives a new grant for cancer
-                  research.
+                  <span>Sep 2025:</span> Just Chill Still No News !!
                 </li>
                 <li>
-                  <span>Aug 2025:</span> Dr. Patel presents at the International
-                  Bioinformatics Conference.
+                  <span>Aug 2025:</span> Chill No News.
                 </li>
                 <li>
-                  <span>Jun 2025:</span> Welcome to our new summer interns!
+                  <span>Jun 2025:</span> Chill No News!
                 </li>
               </ul>
             </div>
@@ -83,43 +137,33 @@ function HomePage() {
                 <p className="pub-journal">
                   <em>{recentPublication.journal}</em>
                 </p>
-                <span>Read More &rarr;</span>
+                <span>Read More →</span>
               </a>
             </div>
           </div>
         </section>
 
-        {/* 4. Meet the PI Section */}
-        <section className="pi-section">
-          <div className="container pi-grid">
-            <img
-              src={pi.photo}
-              alt={`Photo of ${pi.name}`}
-              className="pi-photo"
-            />
-            <div className="pi-info">
-              <h3>Meet the Principal Investigator</h3>
-              <h4>{pi.name}</h4>
-              <p>{pi.bioSnippet}</p>
-              <Link to="/team" className="text-link">
-                Meet the whole team
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* 5. Join Us Section */}
-        <section className="join-section">
+        {/* 4. NEW: Affiliations & Links Section */}
+        <section className="affiliations-section">
           <div className="container">
-            <h2>Join Our Team</h2>
-            <p>
-              We are always looking for passionate and motivated students and
-              researchers. If you are interested in our work, please get in
-              touch.
-            </p>
-            <Link to="/contact" className="cta-button-secondary">
-              Contact Us
-            </Link>
+            <h2>Digital Space</h2>
+            <div className="logo-carousel">
+              <div className="logo-track">
+                {/* We map the array twice for a seamless loop */}
+                {[...socialLinks, ...socialLinks].map((link, index) => (
+                  <a
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    key={`${link.name}-${index}`}
+                    className="logo-item"
+                    title={link.name} /* Tooltip for accessibility */
+                  >
+                    <img src={link.logo} alt={`${link.name} logo`} />
+                  </a>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
       </main>

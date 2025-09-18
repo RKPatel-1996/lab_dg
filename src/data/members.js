@@ -12,6 +12,7 @@ export const allMembers = [
     orcid: "0000-0003-0165-0294",
     github: "https://github.com/DweipayanG",
     researchGate: "https://www.researchgate.net/profile/Dweipayan-Goswami",
+    googleScholar: "https://scholar.google.com/citations?user=dLpNTzsAAAAJ&hl",
     website: "https://dweipayang.github.io/Resume-Webpage",
     youtube: "https://www.youtube.com/c/learnatease",
     bio: " Dr. Dweipayan Goswami is an Assistant Professor at Gujarat University, recognized for his expertise in bioinformatics and microbiology. ",

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-g" />
+    <title>DG'S LAB | Page Not Found</title>
+    <script type="text/javascript">
+      // Get the current path and search query from the URL
+      var path = window.location.pathname;
+      var search = window.location.search;
+      var segment = 1; // 0 for root domain, 1 for GitHub project page
+
+      // Redirect to the correct path for the single-page app
+      window.location.replace(
+        "/" +
+          path
+            .split("/")
+            .slice(0, 1 + segment)
+            .join("/") +
+          "/?p=" +
+          path
+            .slice(1)
+            .split("/")
+            .slice(segment)
+            .join("/")
+            .replace(/&/g, "~and~") +
+          (search ? "&q=" + search.slice(1).replace(/&/g, "~and~") : "") +
+          window.location.hash
+      );
+    </script>
+  </head>
+  <body></body>
+</html>

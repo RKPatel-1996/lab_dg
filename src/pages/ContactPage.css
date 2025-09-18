@@ -96,9 +96,169 @@
   border: 1px solid #ddd;
 }
 
-/* Responsive adjustments for smaller screens */
+/* === STYLES FOR PI & UNIVERSITY CARDS === */
+
+.combined-section {
+  background-color: #f9f9f9; /* Match page background */
+  padding-top: 5rem;
+  overflow: hidden;
+}
+.combined-section .container {
+  padding: 0 2rem;
+}
+
+.combined-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.column {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e0e0e0;
+}
+
+.column:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+}
+
+.column-content {
+  flex-grow: 1;
+}
+
+.column-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1.5rem auto;
+  border: 5px solid #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.column-photo.logo {
+  object-fit: contain;
+  padding: 1rem;
+  background-color: #f0f0f0;
+}
+
+.column-photo-link {
+  display: inline-block;
+  line-height: 0;
+  border-radius: 50%;
+}
+
+.column h3 {
+  font-size: 0.9rem;
+  color: #777;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 0.5rem;
+}
+
+.column h4 {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.column p {
+  color: #555;
+  line-height: 1.7;
+  margin: 0 auto 2rem auto;
+  max-width: 300px;
+}
+.column .text-link {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.column .cta-button-secondary {
+  width: 100%;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  color: #555;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+}
+
+.column .cta-button-secondary:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+  border-color: var(--primary-color);
+  transform: scale(1.05);
+}
+
+.vertical-divider {
+  width: 1px;
+  background-color: #e0e0e0;
+}
+
+/* Social Media Styles */
+.social-media-section {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eee;
+}
+
+.social-media-section h5 {
+  font-size: 0.9rem;
+  color: #777;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.social-links-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.social-links-grid a {
+  font-size: 1.8rem;
+  color: #555;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links-grid a:hover {
+  color: var(--primary-color);
+  transform: scale(1.2);
+}
+
+/* QR Code styles have been removed */
+
+/* Responsive adjustments */
 @media (max-width: 900px) {
   .contact-container {
-    grid-template-columns: 1fr; /* Stack columns on top of each other */
+    grid-template-columns: 1fr;
+  }
+  .combined-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .column {
+    border-radius: 0;
+  }
+  .vertical-divider {
+    height: 1px;
+    width: 80%;
+    margin: 0 auto;
   }
 }
