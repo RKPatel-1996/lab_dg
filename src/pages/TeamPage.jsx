@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer";
 import TeamMemberCard from "../components/TeamMemberCard.jsx";
@@ -9,10 +9,22 @@ import "./TeamPage.css";
 function TeamPage() {
   const [filter, setFilter] = useState("member");
   const [selectedMemberId, setSelectedMemberId] = useState(null);
+  const selectedMemberRef = useRef(null);
 
   useEffect(() => {
     setSelectedMemberId(null);
   }, [filter]);
+
+  // 3. Add this effect to handle scrolling
+  useEffect(() => {
+    // If a member is selected and the ref is attached to the element
+    if (selectedMemberId && selectedMemberRef.current) {
+      selectedMemberRef.current.scrollIntoView({
+        behavior: "smooth", // Makes the scroll animated
+        block: "start", // Aligns the top of the element to the top of the viewport
+      });
+    }
+  }, [selectedMemberId]); // Run this effect every time the selected ID changes
 
   const handleMemberSelect = (memberId) => {
     setSelectedMemberId((prevId) => (prevId === memberId ? null : memberId));

@@ -1,8 +1,7 @@
 // src/components/TeamMemberCard.jsx
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react"; // 1. Import useEffect
 import "./TeamMemberCard.css";
 
-// 1. Accept onSelect and isSelected as props
 function TeamMemberCard({ member, onSelect, isSelected }) {
   const getOrcidId = (orcid) => {
     if (!orcid) return null;
@@ -14,15 +13,18 @@ function TeamMemberCard({ member, onSelect, isSelected }) {
   const placeholderImage = "profile-photos/placeholder.png";
   const [imgSrc, setImgSrc] = useState(member.photo || placeholderImage);
 
+  // 2. Add this effect to sync the image with the prop
+  useEffect(() => {
+    setImgSrc(member.photo || placeholderImage);
+  }, [member.photo]); // It runs whenever the member's photo URL changes
+
   const handleImageError = () => {
     setImgSrc(placeholderImage);
   };
 
-  // 2. Add a dynamic className string
   const cardClassName = `team-card ${isSelected ? "selected" : ""}`;
 
   return (
-    // 3. Add onClick handler to the main div
     <div className={cardClassName} onClick={() => onSelect(member.id)}>
       <div className="card-image-container">
         <img

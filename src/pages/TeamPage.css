@@ -69,3 +69,24 @@
     transform: translateY(0);
   }
 }
+
+/* src/pages/TeamPage.css */
+
+/* === Add this media query at the end of the file === */
+@media (max-width: 992px) {
+  /* A wider breakpoint like 992px often works better for this kind of layout change */
+  .selected-member-container {
+    /* 1. Stack the card and panel vertically */
+    flex-direction: column;
+  }
+
+  /* 2. Make the selected card take up the full width */
+  .selected-member-container .team-card {
+    width: 100%;
+  }
+
+  /* 3. Optional: Reduce main content padding for more space */
+  .team-content {
+    padding: 0 1rem;
+  }
+}
