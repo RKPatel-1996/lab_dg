@@ -1,36 +1,68 @@
 // src/components/Navbar.jsx
 
-import React from "react";
-import { Link } from "react-router-dom"; // Import Link for navigation
-import "./Navbar.css"; // We will create this file next for styling
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom"; // Use NavLink for active styling
+import "./Navbar.css";
 
 function Navbar() {
+  // 1. State to manage if the menu is open or closed
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // Function to toggle the menu's state
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <nav className="navbar">
-      <Link to="/" className="nav-logo">
+      <NavLink to="/" className="nav-logo">
         DG'S LAB
-      </Link>
-      <ul className="nav-links">
+      </NavLink>
+
+      {/* 2. This is the new hamburger menu icon */}
+      <div className="menu-icon" onClick={toggleMenu}>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+      {/* 3. The 'active' class is added here when the menu is open */}
+      <ul className={isMenuOpen ? "nav-links active" : "nav-links"}>
         <li>
-          <Link to="/">Home</Link>
+          {/* 4. Added onClick to close menu after navigation */}
+          <NavLink to="/" onClick={toggleMenu}>
+            Home
+          </NavLink>
         </li>
         <li>
-          <Link to="/research">Our Research</Link>
+          <NavLink to="/research" onClick={toggleMenu}>
+            Our Research
+          </NavLink>
         </li>
         <li>
-          <Link to="/team">Team</Link>
+          <NavLink to="/team" onClick={toggleMenu}>
+            Team
+          </NavLink>
         </li>
         <li>
-          <Link to="/publications">Publications</Link>
+          <NavLink to="/publications" onClick={toggleMenu}>
+            Publications
+          </NavLink>
         </li>
         <li>
-          <Link to="/media">Published Media</Link>
+          <NavLink to="/media" onClick={toggleMenu}>
+            Published Media
+          </NavLink>
         </li>
         <li>
-          <Link to="/resources">Resources</Link>
+          <NavLink to="/resources" onClick={toggleMenu}>
+            Resources
+          </NavLink>
         </li>
         <li>
-          <Link to="/contact">Contact</Link>
+          <NavLink to="/contact" onClick={toggleMenu}>
+            Contact
+          </NavLink>
         </li>
       </ul>
     </nav>
