@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer"; // Assuming you have a Footer component
 import { FaArrowRight } from "react-icons/fa";
+import ScrollButtons from "../components/ScrollButtons";
 import "./HomePage.css";
 
 function HomePage() {
@@ -124,6 +125,7 @@ function HomePage() {
       </main>
 
       <Footer />
+      <ScrollButtons />
     </div>
   );
 }

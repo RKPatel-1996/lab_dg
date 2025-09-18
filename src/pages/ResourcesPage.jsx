@@ -10,6 +10,7 @@ import {
 } from "../data/resources";
 import "./ResourcesPage.css";
 import Footer from "../components/Footer";
+import ScrollButtons from "../components/ScrollButtons";
 
 function ResourcesPage() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -165,6 +166,7 @@ function ResourcesPage() {
         )}
       </main>
       <Footer />
+      <ScrollButtons />
     </div>
   );
 }

@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import PublicationCard from "../components/PublicationCard.jsx";
 import { usePublicationData } from "../hooks/usePublicationData.js";
 import { allMembers } from "../data/members.js";
+import ScrollButtons from "../components/ScrollButtons";
 import "./PublicationsPage.css";
 
 // --- FIX #1: IMPORTANT ---
@@ -133,6 +134,7 @@ function PublicationsPage() {
         )}
       </main>
       <Footer />
+      <ScrollButtons />
     </div>
   );
 }

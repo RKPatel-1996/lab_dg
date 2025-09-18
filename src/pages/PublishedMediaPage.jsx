@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import PhotoGallery from "../components/PhotoGallery"; // We will create this next
 import VideoGallery from "../components/VideoGallery"; // We will create this next
+import ScrollButtons from "../components/ScrollButtons";
 import "./PublishedMediaPage.css";
 
 function PublishedMediaPage() {
@@ -38,6 +39,7 @@ function PublishedMediaPage() {
         </div>
       </main>
       <Footer />
+      <ScrollButtons />
     </div>
   );
 }

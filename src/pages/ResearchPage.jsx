@@ -3,6 +3,7 @@
 import React from "react";
 import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer";
+import ScrollButtons from "../components/ScrollButtons";
 import "./ResearchPage.css"; // We'll create this CSS file next
 
 function ResearchPage() {
@@ -73,6 +74,7 @@ function ResearchPage() {
         </div>
       </main>
       <Footer />
+      <ScrollButtons />
     </div>
   );
 }

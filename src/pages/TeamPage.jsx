@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import TeamMemberCard from "../components/TeamMemberCard.jsx";
 import ExpandedMemberPanel from "../components/ExpandedMemberPanel.jsx";
 import { allMembers } from "../data/members.js";
+import ScrollButtons from "../components/ScrollButtons";
 import "./TeamPage.css";
 
 function TeamPage() {
@@ -15,16 +16,24 @@ function TeamPage() {
     setSelectedMemberId(null);
   }, [filter]);
 
-  // 3. Add this effect to handle scrolling
+  // Replace your existing scrolling useEffect with this one
   useEffect(() => {
-    // If a member is selected and the ref is attached to the element
-    if (selectedMemberId && selectedMemberRef.current) {
-      selectedMemberRef.current.scrollIntoView({
-        behavior: "smooth", // Makes the scroll animated
-        block: "start", // Aligns the top of the element to the top of the viewport
-      });
+    // Check if a member is selected
+    if (selectedMemberId) {
+      // Use a brief timeout to ensure the element has rendered before scrolling
+      const timer = setTimeout(() => {
+        if (selectedMemberRef.current) {
+          selectedMemberRef.current.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      }, 10000); // A 0ms timeout is enough to push this to the next browser "tick"
+
+      // It's good practice to clean up the timeout
+      return () => clearTimeout(timer);
     }
-  }, [selectedMemberId]); // Run this effect every time the selected ID changes
+  }, [selectedMemberId]);
 
   const handleMemberSelect = (memberId) => {
     setSelectedMemberId((prevId) => (prevId === memberId ? null : memberId));
@@ -90,6 +99,7 @@ function TeamPage() {
         </div>
       </main>
       <Footer />
+      <ScrollButtons />
     </div>
   );
 }

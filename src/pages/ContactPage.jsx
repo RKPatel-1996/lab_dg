@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import ScrollButtons from "../components/ScrollButtons";
 
 import {
   FaMapMarkerAlt,
@@ -89,6 +90,7 @@ function ContactPage() {
         </div>
       </main>
       <Footer />
+      <ScrollButtons />
     </div>
   );
 }
