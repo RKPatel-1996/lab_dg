@@ -11,7 +11,7 @@ function TeamMemberCard({ member, onSelect, isSelected }) {
   };
 
   const orcidId = getOrcidId(member.orcid);
-  const placeholderImage = "/profile-photos/placeholder.png";
+  const placeholderImage = "profile-photos/placeholder.png";
   const [imgSrc, setImgSrc] = useState(member.photo || placeholderImage);
 
   const handleImageError = () => {

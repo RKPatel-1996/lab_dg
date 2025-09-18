@@ -6,7 +6,7 @@ export const allMembers = [
     id: "head",
     name: "Dr. Dweipayan Goswami",
     role: "Principal investigator",
-    photo: "public/profile-photos/head.jpg", // Corrected Path
+    photo: "profile-photos/head.jpg", // Corrected Path
     status: "member",
     email: "Dweipayan.goswami@gmail.com",
     orcid: "0000-0003-0165-0294",
@@ -20,7 +20,7 @@ export const allMembers = [
     id: "member2",
     name: "Rohit K. Patel",
     role: "Research Scholar",
-    photo: "public/profile-photos/member2.jpg", // Corrected Path
+    photo: "profile-photos/member2.jpg", // Corrected Path
     status: "member",
     email: "rohitmicrobiologist@gmail.com",
     orcid: "0000-0002-7077-4218",
@@ -35,7 +35,7 @@ export const allMembers = [
     id: "member1",
     name: "Karan Prajapati",
     role: "PhD Candidate",
-    photo: "public/profile-photos/member1.jpg", // Corrected Path
+    photo: "profile-photos/member1.jpg", // Corrected Path
     status: "member",
     email: "karanprajapati2297@gmail.com",
     orcid: "0000-0002-5799-7732",
@@ -47,7 +47,7 @@ export const allMembers = [
     id: "member3",
     name: "Milan Dabhi",
     role: "PhD Candidate",
-    photo: "public/profile-photos/member3.jpeg", // Corrected Path
+    photo: "profile-photos/member3.jpeg", // Corrected Path
     status: "member",
     email: "milan24dabhi@gmail.com",
     orcid: "0000-0001-6581-8389",
@@ -61,7 +61,7 @@ export const allMembers = [
     id: "alumni1",
     name: "Dr. Jignesh Prajapati",
     role: "Assistant Professor, Gujarat University",
-    photo: "public/profile-photos/alumni1.jpg", // Corrected Path
+    photo: "profile-photos/alumni1.jpg", // Corrected Path
     status: "alumni",
     email: "jigneshbiochemist@gmail.com",
     researchGate: "https://www.researchgate.net/profile/Jignesh-Prajapati-5",
@@ -73,7 +73,7 @@ export const allMembers = [
     id: "colab1",
     name: "Dr. Paritoshkumar Parmar",
     role: "Assistant Professor",
-    photo: "public/profile-photos/colab1.jpg", // Using .png as an example
+    photo: "profile-photos/colab1.jpg", // Using .png as an example
     status: "collaborator",
     email: "paritosh.parmar@iar.ac.in",
     orcid: "0000-0001-6463-8124",
