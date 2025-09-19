@@ -180,12 +180,12 @@
   );
 }
 
+/* UPDATED CSS for 11 logos */
 .logo-track {
   display: flex;
-  /* UPDATED: Increased container width to prevent clipping on hover */
-  /* Total logos (8) * 2 * new width per logo (200px) */
-  width: calc(200px * 16);
-  animation: scroll 45s linear infinite;
+  /* Calculation: 11 logos * 2 (for duplication) * 200px width per logo */
+  width: calc(200px * 22);
+  animation: scroll 60s linear infinite; /* Increased duration for more logos */
 }
 
 .logo-carousel:hover .logo-track {
@@ -215,17 +215,15 @@
   transform: scale(1.1);
 }
 
-/* The scrolling animation keyframes */
 @keyframes scroll {
   from {
     transform: translateX(0);
   }
   to {
-    /* UPDATED: Changed calculation to match the new logo item width */
-    transform: translateX(calc(-200px * 8));
+    /* Moves left by the width of the original 11 logos */
+    transform: translateX(calc(-200px * 11));
   }
 }
-/* STYLES FOR .combined-section AND RELATED ELEMENTS HAVE BEEN REMOVED */
 
 /* Responsive Design */
 @media (max-width: 768px) {

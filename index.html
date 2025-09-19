@@ -21,8 +21,8 @@
             window.history.replaceState(
               null,
               null,
-              l.pathname.slice(0, -1) +
-                q.p.replace(/%2F/g, "/") +
+              l.pathname +
+                q.p.replace(/%2F/g, "/") + // <-- CORRECTED
                 (q.q ? "?" + q.q : "") +
                 l.hash
             );
