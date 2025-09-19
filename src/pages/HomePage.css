@@ -76,7 +76,7 @@
 /* 2. Mission Section */
 .mission-section {
   text-align: center;
-  background-color: #cccbcb;
+  background-color: #ffffff;
 }
 .mission-section h2 {
   font-size: 2.5rem;
@@ -87,7 +87,7 @@
   margin: 1rem auto 0;
   font-size: 1.2rem;
   line-height: 1.8;
-  color: #02506e;
+  color: #000000;
 }
 
 /* 3. Updates Section */
@@ -121,7 +121,7 @@
   padding: 1.5rem;
   background-color: white;
   border-radius: 8px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #000000;
   text-decoration: none;
   color: inherit;
   transition: all 0.2s ease-in-out;
@@ -196,14 +196,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* UPDATED: Increased width to give logos more space to scale into */
   width: 200px;
   flex-shrink: 0;
+
+  /* --- NEW / UPDATED --- */
+  /* Add vertical padding to give space for scaling */
+  padding: 15px 0; /* Adjust this value if you need more/less vertical space */
+  /* Or, set a min-height based on the expected scaled height */
+  min-height: 120px; /* (85px base height * 1.1 scale) + some buffer. Adjust if needed. */
+  /* Choose either padding or min-height. Min-height is often more reliable. */
+  /* I'll use min-height here as it's often simpler for this specific issue */
 }
 
 .logo-item img {
   /* THIS IS THE NUMBER TO CHANGE FOR SIZE 👇 */
-  height: 70px; /* UPDATED: Increased from 55px. You can adjust this value! */
+  height: 85px; /* UPDATED: Increased from 55px. You can adjust this value! */
   max-width: 160px; /* UPDATED: Increased max-width to match the new height */
   width: auto;
   opacity: 0.8;
@@ -212,7 +219,7 @@
 
 .logo-item:hover img {
   opacity: 1;
-  transform: scale(1.1);
+  transform: scale(1.3);
 }
 
 @keyframes scroll {
