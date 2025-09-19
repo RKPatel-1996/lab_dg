@@ -41,7 +41,7 @@
 
 .card-info p {
   margin: 0 0 1rem 0;
-  color: #555;
+  color: var(--text-secondary);
   min-height: 40px; /* Helps align cards with different role title lengths */
 }
 
@@ -59,7 +59,7 @@
   text-decoration: none;
   font-weight: bold;
   font-size: 0.9rem;
-  color: var(--primary-color);
+  color: var(--text-secondary);
   transition: color 0.2s;
 }
 
@@ -78,7 +78,7 @@
 .team-card {
   /* ... existing styles ... */
   cursor: pointer; /* Add this to indicate it's clickable */
-  background-color: #fff;
+  background-color: var(--card-background);
 }
 
 /* Add this new rule for the selected state */

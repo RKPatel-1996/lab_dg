@@ -5,16 +5,16 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 
-// The import now correctly points to the file we created
 import HomePage from "./pages/HomePage.jsx";
-
-// (We will create and import the other pages soon)
 import ResearchPage from "./pages/ResearchPage.jsx";
 import TeamPage from "./pages/TeamPage.jsx";
 import PublicationsPage from "./pages/PublicationsPage.jsx";
 import PublishedMediaPage from "./pages/PublishedMediaPage.jsx";
 import ResourcesPage from "./pages/ResourcesPage.jsx";
 import ContactPage from "./pages/ContactPage.jsx";
+
+// You correctly imported this
+import { ThemeProvider } from "./theme/ThemeProvider";
 
 const router = createBrowserRouter(
   [
@@ -31,7 +31,7 @@ const router = createBrowserRouter(
       element: <TeamPage />,
     },
     {
-      path: "/publications", // Ensure this is also plural
+      path: "/publications",
       element: <PublicationsPage />,
     },
     {
@@ -48,12 +48,15 @@ const router = createBrowserRouter(
     },
   ],
   {
-    basename: "/lab_dg/", // Correctly configured for GitHub Pages
+    basename: "/lab_dg/",
   }
 );
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    {/* 👇 Wrap the RouterProvider with your ThemeProvider here 👇 */}
+    <ThemeProvider>
+      <RouterProvider router={router} />
+    </ThemeProvider>
   </React.StrictMode>
 );

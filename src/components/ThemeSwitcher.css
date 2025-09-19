@@ -1,0 +1,16 @@
+/* src/components/ThemeSwitcher.css */
+
+.theme-switcher-select {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  padding: 5px 8px;
+  border-radius: 5px;
+  font-family: var(--font-body);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.theme-switcher-select:hover {
+  border-color: var(--primary-color);
+}

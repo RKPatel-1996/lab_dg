@@ -35,7 +35,7 @@ const socialLinks = [
   },
   {
     name: "GitHub",
-    logo: "logos/github.svg", // Add this logo to public/logos/
+    logo: "logos/github.png", // Add this logo to public/logos/
     url: "https://github.com/DweipayanG",
   },
   {

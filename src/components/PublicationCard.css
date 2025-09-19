@@ -1,7 +1,7 @@
 /* src/components/PublicationCard.css */
 .publication-card {
-  background-color: #fff;
-  border: 1px solid #e0e0e0;
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
@@ -20,7 +20,7 @@
   align-items: center;
   margin-bottom: 1rem;
   font-family: var(--font-heading);
-  color: #555;
+  color: var(--card-background);
 }
 
 .publication-type {
@@ -52,7 +52,7 @@
 
 .publication-authors {
   margin: 0.75rem 0;
-  color: #676f7a; /* Lighter text color for authors */
+  color: var(--text-secondary); /* Lighter text color for authors */
   line-height: 1.6;
   font-size: 0.85rem; /* Smaller font size */
   max-height: 50px; /* Limit height and allow truncation */

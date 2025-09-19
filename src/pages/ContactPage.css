@@ -13,7 +13,7 @@
 .contact-content > p {
   text-align: center;
   font-size: 1.2rem;
-  color: #555;
+  color: var(--text-secondary);
   margin-bottom: 4rem;
   max-width: 700px;
   margin-left: auto;
@@ -57,7 +57,7 @@
 .contact-item p {
   margin: 0;
   line-height: 1.6;
-  color: #333;
+  color: var(--text-secondary);
 }
 
 .contact-item a {
@@ -93,13 +93,13 @@
   height: 100%;
   min-height: 450px;
   border-radius: 8px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-color);
 }
 
 /* === STYLES FOR PI & UNIVERSITY CARDS === */
 
 .combined-section {
-  background-color: #f9f9f9; /* Match page background */
+  background-color: var(--card-background); /* Match page background */
   padding-top: 5rem;
   overflow: hidden;
 }
@@ -120,16 +120,16 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 2rem;
-  background-color: #fff;
+  background-color: var(--card-background);
   border-radius: 16px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 15px rgba(126, 126, 126, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid #e0e0e0;
+  border: 1px solid var(--border-color);
 }
 
 .column:hover {
   transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 12px 15px var(--hover-color);
 }
 
 .column-content {
@@ -142,14 +142,14 @@
   border-radius: 50%;
   object-fit: cover;
   margin: 0 auto 1.5rem auto;
-  border: 5px solid #fff;
+  border: 5px solid var(--border-color);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .column-photo.logo {
   object-fit: contain;
-  padding: 1rem;
-  background-color: #f0f0f0;
+  padding: 0.5rem;
+  background-color: var(--logo-background);
 }
 
 .column-photo-link {
@@ -160,7 +160,7 @@
 
 .column h3 {
   font-size: 0.9rem;
-  color: #777;
+  color: var(--text-color);
   text-transform: uppercase;
   letter-spacing: 1.5px;
   margin-bottom: 0.5rem;
@@ -171,11 +171,11 @@
   font-size: 1.75rem;
   margin-top: 0;
   margin-bottom: 1.5rem;
-  color: #333;
+  color: var(--text-color);
 }
 
 .column p {
-  color: #555;
+  color: var(--text-secondary);
   line-height: 1.7;
   margin: 0 auto 2rem auto;
   max-width: 300px;
@@ -185,40 +185,21 @@
   color: var(--primary-color);
 }
 
-.column .cta-button-secondary {
-  width: 100%;
-  border: 1px solid #ddd;
-  background-color: #f9f9f9;
-  color: #555;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  padding: 1rem 2rem;
-  border-radius: 50px;
-  text-decoration: none;
-}
-
-.column .cta-button-secondary:hover {
-  background-color: var(--primary-color);
-  color: #fff;
-  border-color: var(--primary-color);
-  transform: scale(1.05);
-}
-
 .vertical-divider {
-  width: 1px;
-  background-color: #e0e0e0;
+  width: 6px;
+  background-color: var(--border-color);
 }
 
 /* Social Media Styles */
 .social-media-section {
   margin-top: 1.5rem;
   padding-top: 1.5rem;
-  border-top: 1px solid #eee;
+  border-top: 5px solid var(--border-color);
 }
 
 .social-media-section h5 {
   font-size: 0.9rem;
-  color: #777;
+  color: var(--text-secondary);
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 1rem;
@@ -233,7 +214,7 @@
 
 .social-links-grid a {
   font-size: 1.8rem;
-  color: #555;
+  color: var(--logo-background);
   transition: color 0.3s ease, transform 0.3s ease;
 }
 

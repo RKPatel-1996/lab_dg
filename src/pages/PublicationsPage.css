@@ -14,7 +14,7 @@
 .publications-content > p {
   text-align: center;
   font-size: 1.1rem;
-  color: #555;
+  color: var(--text-secondary);
   margin-bottom: 3rem;
 }
 
@@ -28,7 +28,7 @@
 .results-count {
   margin: 1.5rem 0;
   font-size: 1rem;
-  color: #555;
+  color: var(--secondary-color);
 }
 
 .search-bar {
@@ -36,14 +36,16 @@
   padding: 0.75rem 1rem;
   font-size: 1rem;
   border-radius: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  background-color: var(--background-color);
 }
 
 .toolbar-container button {
   padding: 0.75rem 1.5rem;
   border: none;
   background-color: var(--primary-color);
-  color: white;
+  color: rgb(238, 234, 234);
   border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
@@ -52,19 +54,33 @@
 }
 
 .toolbar-container button:hover {
-  background-color: #0aa899;
+  background-color: var(--hover-color);
 }
 
 .no-results-message {
   text-align: center;
   font-size: 1.1rem;
-  color: #666;
+  color: var(--secondary-color);
   padding: 3rem;
+}
+
+/*publication cards color */
+
+a.publication-title {
+  color: var(--text-color);
+}
+
+p.publication-journal {
+  color: var(--text-secondary);
+}
+
+p.publication-authors {
+  color: var(--text-secondary);
 }
 
 /* Loading and Error styles remain the same */
 .loading-spinner {
-  border: 5px solid #f3f3f3;
+  border: 5px solid var(--border-color);
   border-top: 5px solid var(--primary-color);
   border-radius: 50%;
   width: 50px;
@@ -93,7 +109,7 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  background-color: #f0f8ff;
+  background-color: var(--card-background);
   padding: 0.5rem 1rem;
   border-radius: 20px;
   font-size: 0.9rem;

@@ -35,7 +35,7 @@ export const allMembers = [
   {
     id: "member1",
     name: "Karan Prajapati",
-    role: "PhD Candidate",
+    role: "Research Scholar",
     photo: "profile-photos/member1.jpg", // Corrected Path
     status: "member",
     email: "karanprajapati2297@gmail.com",
@@ -47,7 +47,7 @@ export const allMembers = [
   {
     id: "member3",
     name: "Milan Dabhi",
-    role: "PhD Candidate",
+    role: "Research Scholar",
     photo: "profile-photos/member3.jpeg", // Corrected Path
     status: "member",
     email: "milan24dabhi@gmail.com",
@@ -65,11 +65,38 @@ export const allMembers = [
     photo: "profile-photos/alumni1.jpg", // Corrected Path
     status: "alumni",
     email: "jigneshbiochemist@gmail.com",
+    orcid: "0000-0001-8700-9929",
     researchGate: "https://www.researchgate.net/profile/Jignesh-Prajapati-5",
+    googleScholar:
+      "https://scholar.google.com/citations?hl=en&user=Rf-2ZtgAAAAJ",
     youtube: "https://www.youtube.com/@biologyinsights",
+    bio: "Dr. Jignesh Prajapati is an Assistant Professor in the Department of Biochemistry and Forensic Science at Gujarat University. His research and educational focus is on biochemistry and biotechnology, including expertise in computational and in vitro studies, molecular docking, and microbial research.",
   },
 
   // --- Collaborators ---
+  {
+    id: "colab4",
+    name: "Prof (Dr.) Meenu Saraf",
+    role: "Dean, Faculty Sciences, Director-SOS, Professor- Dept. of Microbiology & Biotechnology",
+    photo: "profile-photos/colab4.jpg", // Using .png as an example
+    status: "collaborator",
+    email: " msaraf@gujaratuniversity.ac.in",
+    orcid: "0000-0003-4964-9452",
+    googleScholar:
+      "https://scholar.google.com/citations?user=wzww6UYAAAAJ&hl=en",
+    researchGate: "https://www.researchgate.net/profile/Meenu-Saraf",
+    bio: "Professor Meenu Saraf is the Director of the University School of Sciences at Gujarat University. Her research focuses on microbiology, biofertilizers, and sustainable agriculture.",
+  },
+  {
+    id: "colab3",
+    name: "Dr. Chaitanya kumar Jha",
+    role: "Professor (Assistant), Gujarat Arts and Science College Ahmedabad, India",
+    photo: "profile-photos/colab3.png", // Using .png as an example
+    status: "collaborator",
+    email: "chaitanyakjha@gmail.com",
+    orcid: "0000-0002-0890-3082",
+    googleScholar: "https://scholar.google.com/citations?user=mnURdrcAAAAJ&hl",
+  },
   {
     id: "colab1",
     name: "Dr. Paritoshkumar Parmar",
@@ -85,7 +112,7 @@ export const allMembers = [
     id: "colab2",
     name: "Dr. Arpit Shukla",
     role: "Assistant Professor",
-    photo: "", // Corrected Path
+    photo: "profile-photos/colab2.png", // Corrected Path
     status: "collaborator",
     orcid: "0000-0003-3099-0036",
     googleScholar:

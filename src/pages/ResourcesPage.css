@@ -10,14 +10,14 @@
   padding: 0.75rem 1rem;
   font-size: 1.1rem;
   border-radius: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-color);
   box-sizing: border-box;
 }
 
 .no-results-message {
   text-align: center;
   font-size: 1.2rem;
-  color: #666;
+  color: var(--text-color);
   padding: 3rem 0;
 }
 
@@ -36,7 +36,7 @@
 .resources-content > p {
   text-align: center;
   font-size: 1.2rem;
-  color: #555;
+  color: var(--text-color);
   margin-bottom: 4rem;
 }
 
@@ -58,6 +58,28 @@
   gap: 1.5rem;
 }
 
+div.resource-card {
+  background-color: var(--card-background);
+}
+
+.resource-card p {
+  color: var(--text-secondary);
+}
+
+.resources-content h1 {
+  font-family: var(--font-heading);
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--text-color);
+}
+
+.resources-content > p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  margin-bottom: 4rem;
+}
+
 .video-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
@@ -68,12 +90,14 @@
 .video-highlight h3 {
   margin-top: 1rem;
   font-family: var(--font-heading);
+  color: var(--text-color);
 }
 
 .video-grid p,
 .video-highlight p {
-  color: #555;
+  color: var(--text-color);
   margin-top: 0.5rem;
+  color: var(--text-secondary);
 }
 
 /* Responsive YouTube Embed */
@@ -83,7 +107,7 @@
   height: 0;
   overflow: hidden;
   max-width: 100%;
-  background: #000;
+  background: var(--card-background);
   border-radius: 8px;
 }
 

@@ -91,6 +91,11 @@ function TeamMemberCard({ member, onSelect, isSelected }) {
               website
             </a>
           )}
+          {member.youtube && (
+            <a href={member.youtube} target="_blank" rel="noopener noreferrer">
+              youtube
+            </a>
+          )}
         </div>
       </div>
     </div>

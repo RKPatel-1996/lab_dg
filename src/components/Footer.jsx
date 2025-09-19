@@ -57,23 +57,16 @@ function Footer() {
           <h4>Follow Us</h4>
           <div className="social-icons">
             <a
-              href="#"
+              href="https://x.com/DweipayanG"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Twitter"
             >
               <FaTwitter />
             </a>
+
             <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-            >
-              <FaLinkedin />
-            </a>
-            <a
-              href="#"
+              href="https://github.com/DweipayanG"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
