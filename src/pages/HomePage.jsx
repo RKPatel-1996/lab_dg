@@ -25,7 +25,7 @@ const socialLinks = [
   },
   {
     name: "Personal Website",
-    logo: "profile-photos/DG_logo.png",
+    logo: "profile-photos/DG_logo.svg",
     url: "https://dweipayang.github.io/Resume-Webpage",
   },
   {
@@ -119,13 +119,15 @@ function HomePage() {
               <h3>Latest News</h3>
               <ul>
                 <li>
-                  <span>Sep 2025:</span> Just Chill Still No News !!
-                </li>
-                <li>
-                  <span>Aug 2025:</span> Chill No News.
-                </li>
-                <li>
-                  <span>Jun 2025:</span> Chill No News!
+                  <span>Sep 2025:</span> Dr. Dweipayan Goswami was named among
+                  the world's top 2% of most-cited scientists in a recent
+                  ranking by Stanford University and Elsevier. The annual list
+                  highlights impactful researchers across scientific fields. You
+                  can find data updates related to this ranking at Elsevier
+                  Digital Commons Data.
+                  <a href="https://elsevier.digitalcommonsdata.com/datasets/btchxktzyw/8">
+                    <span> Read More →</span>
+                  </a>
                 </li>
               </ul>
             </div>
